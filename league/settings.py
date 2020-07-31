@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,20 +59,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated', # permission user만 통과 
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': ( # request.user or request.auth에 접근할 때, authenticator 세트를 결정
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication', # jwt로 인증
         'rest_framework.authentication.SessionAuthentication', # Session Backend에서 session으로 인증 
         'rest_framework.authentication.BasicAuthentication',   # username, password로 인증
     ),
-}
-
-JWT_AUTH = {
-    'JWT_SECRET_KEY': SECRECT_KEY, # JWT 서명에 사용하는 비밀 키 
-    'JWT_ALGORITHM': 'HS256', # JWT사용을 위한 알고리즘 
-    'JWT_VERIFY_EXPIRATION': True, # 만료시간을 확인 여부
-    'JWT_ALLOW_REFRESH': True, # refresh token 사용 여부 
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(minute=10), # acess token expiration time setting
-    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(hours=1), # refresh token expriation time setting
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'api.custom_responses.my_jwt_response_handler' # login 혹은 refresh 후 response data를 다루는 함수 지정
 }
 
 TEMPLATES = [
