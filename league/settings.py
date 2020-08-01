@@ -59,10 +59,17 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated', # permission user만 통과 
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': ( # request.user or request.auth에 접근할 때, authenticator 세트를 결정
-        'rest_framework.authentication.SessionAuthentication', # Session Backend에서 session으로 인증 
-        'rest_framework.authentication.BasicAuthentication',   # username, password로 인증
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # Session Backend에서 session으로 인증 
     ),
 }
+
+SIIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(days=1),
+    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(days=30),
+    "SLIDING_TOKEN_LIFETIME": datetime.timedelta(days=1),
+    "SLIDING_TOKEN_REFRESH_LIFETIME": datetime.timedelta(days=30),
+}
+
 
 TEMPLATES = [
     {
