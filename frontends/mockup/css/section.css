@@ -1,0 +1,35 @@
+.search {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  border: 3px solid black;
+  width: 70%;
+  height: 100px;
+  margin: 100px 30px 30px 30px;
+}
+
+.search-filter {
+  border: 3px solid black;
+  width: 70%;
+  height: 60px;
+  margin: 0px 30px 50px 30px;
+}
+
+.result-container {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: space-between;
+  height: 600px;
+  padding: 20px 50px;
+}
+
+.result-item {
+  border: 3px solid black;
+  width: 20%;
+  height: 100px;
+  margin: 15px;
+}

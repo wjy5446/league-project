@@ -1,0 +1,41 @@
+header {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container {
+  background-color: green;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  background-color: red;
+  padding: 20px 15px;
+}
+
+.nav-item {
+  padding: 20px 30px;
+}
+
+.account-container {
+  display: flex;
+  align-items: center;
+}
+
+.account-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-log-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 40px;
+}
+
+.account-item {
+  padding: 15px;
+}
