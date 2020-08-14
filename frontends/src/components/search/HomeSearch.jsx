@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
+import { mediaQuery } from "../../lib/styles/media";
 
 function HomeSearch() {
   return (
@@ -17,12 +18,19 @@ function HomeSearch() {
 }
 
 const Block = styled.div`
+  display: flex;
+  justify-content: center;
   background-color: yellow;
   padding: 2rem;
 `;
 
 const Search = styled.div`
-  padding: 1rem 10rem;
+  ${mediaQuery(2000)} {
+    width: calc(1000px - 1rem);
+  }
+  ${mediaQuery(1000)} {
+    width: calc(100% - 1rem);
+  }
 `;
 
 const SearchInput = styled.div`
@@ -31,7 +39,7 @@ const SearchInput = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 `;
 
 const SearchFilter = styled.div`
@@ -41,7 +49,6 @@ const SearchFilter = styled.div`
 `;
 
 const SearchLogo = styled(MdSearch)`
-  margin-right: 3rem;
   border: 1px solid black;
   border-radius: 1.5rem;
   padding: 0.5rem;
@@ -49,6 +56,8 @@ const SearchLogo = styled(MdSearch)`
 
 const SearchField = styled.input`
   height: 100%;
+  width: 80%;
+  margin-left: 1rem;
   border: 1px solid black;
   flex: 1;
   font-size: 2rem;

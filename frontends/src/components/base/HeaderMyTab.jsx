@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { MdFlag, MdGroup } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 function HeaderMyTab() {

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import HeaderLogo from "./HeaderLogo";
 import HeaderTab from "./HeaderTab";
 import HeaderMyTab from "./HeaderMyTab";
+import RoundButton from "../common/RoundButton";
 
 function Header() {
   return (
@@ -15,7 +16,7 @@ function Header() {
         </Left>
         <Right>
           <HeaderMyTab />
-          
+          <RoundButton size="DEFAULT">Log in</RoundButton>
         </Right>
       </Inner>
     </Block>
@@ -35,17 +36,13 @@ const Inner = styled.div`
 const Left = styled.div`
   display: flex;
   background-color: red;
-  align-content: center;
+  align-items: center;
 `;
 
 const Right = styled.div`
   display: flex;
   background-color: red;
-`;
-
-const HeaderLogMenu = styled.div`
-  display: flex;
-  justify-content: space-between;
+  align-items: center;
 `;
 
 export default Header;
