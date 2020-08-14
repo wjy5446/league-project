@@ -15,7 +15,7 @@ function Header() {
         </Left>
         <Right>
           <HeaderMyTab />
-          <HeaderLogMenu>LogMenu</HeaderLogMenu>
+          
         </Right>
       </Inner>
     </Block>
