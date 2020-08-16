@@ -8,8 +8,8 @@ function HomeSearch() {
     <Block>
       <Search>
         <SearchInput>
-          <SearchLogo style={{ fontSize: 20 }} />
-          <SearchField type="text" />
+          <SearchLogo style={{ fontSize: 40 }} />
+          <SearchField type="text" placeholder="My First League" />
         </SearchInput>
         <SearchFilter />
       </Search>
@@ -37,29 +37,33 @@ const SearchInput = styled.div`
   height: 5rem;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   padding: 1rem 2rem;
 `;
 
 const SearchFilter = styled.div`
-  border: 1px solid black;
   height: 2rem;
   margin-top: 1.5rem;
+  border-radius: 0.2rem;
+  background-color: #e2e3f0;
 `;
 
 const SearchLogo = styled(MdSearch)`
-  border: 1px solid black;
-  border-radius: 1.5rem;
   padding: 0.5rem;
+  cursor: pointer;
 `;
 
 const SearchField = styled.input`
   height: 100%;
   width: 80%;
   margin-left: 1rem;
-  border: 1px solid black;
   flex: 1;
   font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export default HomeSearch;
