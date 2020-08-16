@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { mediaQuery } from "../../lib/styles/media";
 
 function RoundButton({ to, size, children }) {
   return <RoundButtonBlock size={size}>{children}</RoundButtonBlock>;

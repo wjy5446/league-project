@@ -28,7 +28,7 @@ function HomePage() {
                   component={LeaguePage}
                   exact
                 />
-                <Route path={("/team", "/myteam")} component={TeamPage} exact />
+                <Route path={["/team", "/myteam"]} component={TeamPage} exact />
               </Switch>
             </>
           }

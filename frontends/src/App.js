@@ -7,7 +7,11 @@ function App() {
   return (
     <>
       <Switch>
-        <Route path="/" component={HomePage} exact />
+        <Route
+          path={["/", "/league", "/team", "/myleague", "/myteam"]}
+          component={HomePage}
+          exact
+        />
         <Route path="/login" exact />
       </Switch>
     </>

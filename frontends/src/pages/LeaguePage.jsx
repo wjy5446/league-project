@@ -6,14 +6,14 @@ import PostCard from "../components/common/PostCard";
 function LeaguePost() {
   return (
     <PostCardGrid>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
+      <PostCard type="league" />
+      <PostCard type="league" />
+      <PostCard type="league" />
+      <PostCard type="league" />
+      <PostCard type="league" />
+      <PostCard type="league" />
+      <PostCard type="league" />
+      <PostCard type="league" />
     </PostCardGrid>
   );
 }

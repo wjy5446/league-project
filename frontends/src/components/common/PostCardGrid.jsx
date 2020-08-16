@@ -1,21 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import PostCard from "./PostCard";
 import { mediaQuery } from "../../lib/styles/media";
 
-function PostCardGrid() {
-  return (
-    <Block>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-      <PostCard></PostCard>
-    </Block>
-  );
+function PostCardGrid({ children }) {
+  return <Block>{children}</Block>;
 }
 
 const Block = styled.div`
