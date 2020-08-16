@@ -20,7 +20,6 @@ function HomeSearch() {
 const Block = styled.div`
   display: flex;
   justify-content: center;
-  background-color: yellow;
   padding: 2rem;
 `;
 
