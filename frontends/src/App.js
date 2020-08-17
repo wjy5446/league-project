@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-
+import Core from "./containers/base/Core";
 import HomePage from "./pages/HomePage";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
         />
         <Route path="/login" exact />
       </Switch>
+      <Core />
     </>
   );
 }
