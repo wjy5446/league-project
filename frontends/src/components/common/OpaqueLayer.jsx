@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 function OpaqueLayer({ visible }) {
-  return <OpaqueLayerBlock></OpaqueLayerBlock>;
+  return <OpaqueLayerBlock visible={visible} />;
 }
 
 const OpaqueLayerBlock = styled.div`
